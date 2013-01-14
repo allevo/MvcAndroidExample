@@ -8,6 +8,7 @@ import com.tallevi.android.mvc.MVCController;
 import com.tallevi.android.mvc.example.callable.ImageCallable;
 import com.tallevi.android.mvc.example.model.ImageModel;
 import com.tallevi.android.mvc.example.result.ImageResult;
+import com.tallevi.android.mvc.example.view.SmartImageView;
 import com.tallevi.android.mvc.view.MVCViewWrapper;
 
 public class MainActivity extends Activity {
@@ -32,9 +33,10 @@ public class MainActivity extends Activity {
 		view = new MVCViewWrapper(view2);
 		controller.link(view, new ImageResult());
 		controller.execute(new ImageCallable(GOOGLE_LOGO_URL));
-		
+
 		controller = MVCController.createControllerFromModel();
 		controller.link(view3, new ImageResult());
+		controller.link((SmartImageView) findViewById(R.id.smartImageView1));
 		controller.execute(new ImageCallable(IAMBOO_LOGO_URL));
 	}
 

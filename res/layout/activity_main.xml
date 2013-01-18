@@ -37,4 +37,20 @@
         android:layout_marginBottom="15dp" >
     </com.tallevi.android.mvc.example.view.SmartImageView>
 
+    <Button
+        android:id="@+id/github_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Login with Github" />
+
+    <com.tallevi.android.mvc.example.view.ImageSwitcher
+        android:id="@+id/imageSwitcher1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view3"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_launcher" />
+
 </RelativeLayout>
